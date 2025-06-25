@@ -1,7 +1,5 @@
 import localFont from 'next/font/local'
 import "./globals.css";
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
 import LenisProvider from './components/LenisProvider';
 
 const PPNeueMachina = localFont({
@@ -44,9 +42,7 @@ export default function RootLayout({ children }) {
         className={`${PPNeueMachina.variable} ${SaolStandard.variable} antialiased overflow-x-hidden bg-white`}
       >	
         <LenisProvider>
-          <Navbar />
             {children}
-          <Footer />
         </LenisProvider>
       </body>
     </html>

@@ -34,7 +34,7 @@ export default function Navbar() {
         transition={{ delay: 1, duration: 0.5, ease: "easeInOut" }}
         className={`md:hidden z-50 transition-all duration-500 ease-in-out w-[21rem] fixed bottom-6 left-1/2 transform -translate-x-1/2`}
       >
-        <div className="flex items-center justify-between bg-white rounded-full px-4 py-3 shadow-lg text-sm font-medium">
+        <div className="flex items-center justify-between bg-white rounded-full px-4 py-3 text-sm font-medium" style={{ boxShadow: '0 0 20px rgba(0,0,0,0.1)' }}>
           {/* Menu Link */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -99,7 +99,7 @@ export default function Navbar() {
               <div className="mt-20 space-y-4">
                 {navItems.map((item) => (
                   <Link
-                    href={item === "OUTRO" ? "/outro" : `/#${item.toLowerCase()}`}
+                    href={item === "EXPERIENCE" ? "/experience" : `/#${item.toLowerCase()}`}
                     key={item}
                     onClick={() => {
                       setActiveTab(item);
@@ -140,10 +140,11 @@ export default function Navbar() {
             : "absolute bottom-6 left-1/2 transform -translate-x-1/2"
         }`}
       >
-        <div className="flex items-center bg-white rounded-full p-2 shadow-xl w-[26.1rem] text-sm font-medium">
+        <div className="flex items-center bg-white rounded-full p-2 border-neutral-200 w-[29rem] text-sm font-medium" 
+        style={{ boxShadow: '0 0 20px rgba(0,0,0,0.1)' }}>
           {navItems.map((item) => (
             <Link
-              href={item === "OUTRO" ? "/outro" : `/#${item.toLowerCase()}`}
+              href={item === "EXPERIENCE" ? "/experience" : `/#${item.toLowerCase()}`}
               key={item}
               onClick={() => setActiveTab(item)}
               className={`px-4 py-2 rounded-full transition-colors hover:bg-neutral-50 duration-300 ${

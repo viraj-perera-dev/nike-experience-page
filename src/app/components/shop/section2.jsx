@@ -7,7 +7,7 @@ function Section2() {
 
 
   return (
-    <section className="h-full  max-w-8xl container mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen px-6 md:px-10 py-20">
+    <section className="h-full max-w-8xl container mx-auto grid grid-cols-1 lg:grid-cols-2 px-6 md:px-10 py-10">
       <div className="h-auto container mx-auto  relative z-10">
         <p className="absolute top-0 left-0 text-sm tracking-widest text-gray-400 mb-2">
           <span className="text-[0.5rem] text-black mr-2">{"■"}</span>LOOK

@@ -28,7 +28,7 @@ function Section1() {
       </div>
 
       {/* Right: Product Info */}
-      <div className="flex flex-col justify-center px-5 md:w-4/5 xl:w-2/3 mx-auto mt-10 md:mt-44 lg:mt-0 z-40">
+      <div className="flex flex-col justify-center px-5 md:w-4/5 xl:w-2/3 mx-auto mt-10 z-40">
         <small className="uppercase text-xs tracking-wide text-gray-400 mb-2">
           Info
         </small>
