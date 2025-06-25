@@ -8,7 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
-const navItems = ["INTRO", "CAROUSEL", "OUTRO"];
+const navItems = ["INTRO", "CAROUSEL", "EXPERIENCE"];
 
 export default function Navbar() {
   const pathname = usePathname();
