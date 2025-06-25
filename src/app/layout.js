@@ -1,14 +1,35 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import LenisProvider from './components/LenisProvider';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const PPNeueMachina = localFont({
+  src: [
+    {
+      path: './assets/fonts/PPNeueMachina-InktrapLight.ttf',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: './assets/fonts/PPNeueMachina-InktrapRegular.ttf',
+      weight: '600',
+      style: 'normal'
+    },
+    {
+      path: './assets/fonts/PPNeueMachina-InktrapMedium.ttf',
+      weight: '700',
+      style: 'normal'
+    }
+  ],
+  display: 'swap',
+  variable: '--font-pp-neue-machina'
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const SaolStandard = localFont({
+  src: './assets/fonts/SaolStandard-LightItalic.otf',
+  display: 'swap',
+  variable: '--font-saol-standard'
 });
 
 export const metadata = {
@@ -20,9 +41,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+        className={`${PPNeueMachina.variable} ${SaolStandard.variable} antialiased overflow-x-hidden bg-white`}
+      >	
+        <LenisProvider>
+          <Navbar />
+            {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

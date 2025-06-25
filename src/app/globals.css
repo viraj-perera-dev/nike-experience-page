@@ -5,22 +5,84 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #171717;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-pp-neue-machina), sans-serif;
+}
+
+.italic {
+  font-family: var(--font-saol-standard), serif;
+}
+
+.progress-button-light {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.progress-button-light::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(248 250 252); 
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.progress-button-light:hover::after,
+.progress-button-light.active::after {
+  width: 100%;
+}
+
+.progress-button-light:hover,
+.progress-button-light.active {
+  color: black; /* text-black equivalent */
+  z-index: 1;
+}
+
+.progress-button-dark {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.progress-button-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(0, 0, 0); 
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.progress-button-dark:hover::after {
+  width: 100%;
+}
+
+.progress-button-dark:hover {
+  color: rgb(255, 255, 255); 
+  z-index: 1;
+}
+
+/* styles/globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
