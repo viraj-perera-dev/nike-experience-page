@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "name": "Nike Air Max 1 Premium",
+    "image": "/images/slider/img1.avif",
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "sizes": ["EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44"],
+    "colors": ["WHITE", "BLACK"],
+    "cta": {
+      "default": "KEEP ME UPDATED",
+      "liked": "ADDED TO FAVORITES"
+    }
+  }
+  

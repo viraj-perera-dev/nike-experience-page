@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 import React, { useState } from "react";
+import product from "../../assets/product.json";
 
 function Section1() {
   const [selectedSize, setSelectedSize] = useState(null);
   const [selectedColor, setSelectedColor] = useState("WHITE");
   const [liked, setLiked] = useState(false);
 
-  const sizes = ["EU 39", "EU 40", "EU 41", "EU 42", "EU 43", "EU 44"];
+  const sizes = product.sizes;
 
   return (
     <section className="h-full lg:h-screen max-w-8xl container mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen px-4 md:px-10 py-10">
@@ -17,8 +18,8 @@ function Section1() {
       <div className="relative w-full h-full flex flex-col justify-center">
         <div className="relative w-full  h-[74vh] rounded-3xl overflow-hidden">
           <Image
-            src="/images/slider/img1.avif"
-            alt="Nike Air Max"
+            src={product.image}
+            alt={product.name}
             fill
             className="object-cover"
             priority
@@ -32,15 +33,10 @@ function Section1() {
           Info
         </small>
         <h1 className="text-3xl md:text-4xl font-bold mb-4">
-          Nike Air Max 1 <br /> Premium
+          {product.name}
         </h1>
         <p className="text-sm text-gray-500 mb-6">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium{" "}
-          <span className="font-medium text-gray-800">
-            doloremque laudantium
-          </span>
-          .
+          {product.description}{" "}
         </p>
         <button className="text-sm opacity-30 hover:opacity-60 transition ease-in-out duration-300 cursor-pointer uppercase text-start">
           + learn more
@@ -77,8 +73,11 @@ function Section1() {
               onChange={(e) => setSelectedColor(e.target.value)}
               className="appearance-none bg-white border border-gray-300 px-6 py-3 pr-10 rounded-full text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-black focus:border-black transition-all cursor-pointer w-full"
             >
-              <option>WHITE</option>
-              <option>BLACK</option>
+              {product.colors.map((color) => (
+                <option key={color} value={color}>
+                  {color}
+                </option>
+              ))}
             </select>
 
             {/* Custom Arrow Icon */}
@@ -106,7 +105,7 @@ function Section1() {
             <hr className="w-[0.1rem] h-[3rem] bg-neutral-500"></hr>{" "}
           </span>
           <span className="text-sm uppercase mx-auto">
-            {liked ? "ADDED TO FAVORITES" : "KEEP ME UPDATED"}
+            {liked ? product.cta.liked : product.cta.default}
           </span>
         </button>
       </div>
