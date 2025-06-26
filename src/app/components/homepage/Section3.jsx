@@ -109,7 +109,6 @@ export default function Section3() {
                 const opacity = isTop ? 1 : isSide ? 0.6 : 0;
                 const zIndex = isTop ? 50 : isSide ? 30 : 0;
               
-                console.log("isTop", isTop);
                 return (
                   <motion.div
                     key={index}
