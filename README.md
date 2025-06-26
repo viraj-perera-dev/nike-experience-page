@@ -21,7 +21,6 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 - [Responsività](#-responsività)
 - [Problemi Noti e Miglioramenti Futuri](#-problemi-noti-e-miglioramenti-futuri)
 - [Processo di Sviluppo](#-processo-di-sviluppo)
-- [Contributi](#-contributi)
 
 ## ✨ Caratteristiche Principali
 
