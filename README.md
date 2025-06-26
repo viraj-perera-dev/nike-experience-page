@@ -102,7 +102,7 @@ nike-experience-page/
 
 ```bash
 # Clona il repository
-git clone [URL_REPOSITORY]
+git clone https://github.com/viraj-perera-dev/nike-experience-page.git
 cd nike-experience-page
 
 # Installa le dipendenze
