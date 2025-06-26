@@ -29,17 +29,10 @@ function Loader({ onFinish }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 flex flex-col items-center justify-center w-full h-[110vh] bg-black text-white space-y-10 z-50 transition-opacity duration-700 ${
+      className={`fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-black text-white space-y-10 z-50 transition-opacity duration-700 ${
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      {/* <Image
-        src="/images/logo.svg"
-        alt="Nike Logo"
-        width={50}
-        height={50}
-        className="transition-transform duration-500 ease-out hover:scale-110"
-      /> */}
 
       <div className="text-center leading-snug space-y-1 transition-all duration-700">
         <div className="text-3xl tracking-wide">Creating an amazing</div>

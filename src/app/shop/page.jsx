@@ -8,13 +8,13 @@ import Navbar from '../components/Navbar';
 
 export default function Shop() {
   return (
-    <>
+    <div className="bg-white">
       <Navbar/>
       <Section1/>
       <Section2/>
       <Section3/>
       <Banner/>
       <Footer/>
-    </>
+    </div>
   );
 }

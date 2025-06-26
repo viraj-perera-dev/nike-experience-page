@@ -13,7 +13,7 @@ function Section1() {
   const sizes = product.sizes;
 
   return (
-    <section className="h-full lg:h-screen max-w-8xl container mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen px-4 md:px-10 py-10">
+    <section className="h-full lg:h-screen max-w-8xl container mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-screen px-4 md:px-10 py-10 text-black">
       {/* Left: Image with Tabs */}
       <div className="relative w-full h-full flex flex-col justify-center">
         <div className="relative w-full  h-[74vh] rounded-3xl overflow-hidden">

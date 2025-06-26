@@ -39,9 +39,9 @@ export default function Section3() {
 
   return (
     <section className="relative bg-white py-20 px-6 md:px-10 overflow-hidden" id="carousel">
-      <div className="md:h-[80vh] h-[90vh] container mx-auto px-4 flex flex-col items-center justify-center relative z-0">
+      <div className="md:h-[100vh] h-[90vh] container mx-auto px-4 flex flex-col items-center justify-center relative z-0">
         <p className="absolute top-0 md:left-0 left-6 text-sm tracking-widest text-gray-400 mb-2">
-          <span className="text-[0.5rem] text-black mr-2">{"■"}</span>02 /
+          <span className="text-[0.5rem] te``xt-black mr-2">{"■"}</span>02 /
           CAROUSEL
         </p>
         {/* Header */}
