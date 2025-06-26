@@ -165,8 +165,6 @@ Per il controllo del modello 3D ho preferito GSAP a Framer Motion perché:
 - **Performance Optimization**: GSAP per ottimizzazione performance
 
 ![Screenshot Mobile](./screenshots/mobile1.png)
-![Screenshot Mobile](./screenshots/mobile2.png)
-*Versione mobile responsive*
 
 ## ⚡ Performance e Ottimizzazioni
 
