@@ -5,11 +5,11 @@ import ExperienceClient from "../components/experience/ExperienceClient"; // adj
 import Loader from "../components/experience/components/Loader";
 
 export default function ExperiencePage() {
-    const [showLoading, setShowLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   return (
     <main className="overflow-hidden h-full">
-      {showLoading && <Loader setShowLoading={setShowLoading} />}
+      {loading && <Loader onFinish={() => setLoading(false)} />}
       <ExperienceClient />
     </main>
   );

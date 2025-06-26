@@ -2,61 +2,51 @@
 
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { useProgress } from "@react-three/drei";
 
-function Loader({ setShowLoading }) {
-  const [progress, setProgress] = useState(0);
+function Loader({ onFinish }) {
+  const { progress, loaded, total } = useProgress();
+  const [showStartButton, setShowStartButton] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    setShowLoading(true);
-    let animationFrameId;
-
-    const animate = () => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          return 100;
-        }
-        return prev + 1;
-      });
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [setShowLoading]);
-
-  // Effect to hide loader once progress reaches 100
-  useEffect(() => {
-    if (progress === 100) {
-      // Delay a tick to avoid state update during render
-      const timeout = setTimeout(() => setShowLoading(false), 0);
+    if (loaded === total && total > 0) {
+      const timeout = setTimeout(() => {
+        setShowStartButton(true);
+      }, 500);
       return () => clearTimeout(timeout);
     }
-  }, [progress, setShowLoading]);
+  }, [loaded, total]);
 
-  const circumference = 2 * Math.PI * 45; // 2πr with r=45
+  const handleStart = () => {
+    setFadeOut(true);
+    setTimeout(() => {
+      onFinish();
+    }, 800); // match fade out duration
+  };
+
+  const circumference = 2 * Math.PI * 45;
 
   return (
-    <div className="fixed top-0 left-0 flex flex-col items-center justify-center w-full h-[110vh] bg-black text-white space-y-10 z-50">
-      {/* Nike logo */}
-      <Image
+    <div
+      className={`fixed top-0 left-0 flex flex-col items-center justify-center w-full h-[110vh] bg-black text-white space-y-10 z-50 transition-opacity duration-700 ${
+        fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
+    >
+      {/* <Image
         src="/images/logo.svg"
         alt="Nike Logo"
         width={50}
         height={50}
-        className={`transition duration-500 cursor-pointer`}
-      />
+        className="transition-transform duration-500 ease-out hover:scale-110"
+      /> */}
 
-      {/* Tagline */}
-      <div className="text-center leading-snug">
-        <div className="italic text-lg">EVERYTHING</div>
-        <div className="text-xl">to the</div>
-        <div className="italic text-lg">MAX</div>
+      <div className="text-center leading-snug space-y-1 transition-all duration-700">
+        <div className="text-3xl tracking-wide">Creating an amazing</div>
+        <div className="text-5xl text-neutral-500 italic">experience</div>
       </div>
 
-      {/* Circular progress bar */}
-      <div className="relative w-32 h-32">
+      <div className="relative w-32 h-32 transition-all duration-700">
         <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
           <circle
             cx="50"
@@ -77,11 +67,28 @@ function Loader({ setShowLoading }) {
             strokeDashoffset={circumference - (progress / 100) * circumference}
             fill="none"
             strokeLinecap="round"
+            style={{ transition: "stroke-dashoffset 0.5s ease-out" }}
           />
         </svg>
-        <div className="absolute inset-0 flex items-center justify-center text-white text-sm">
-          {progress}%
+        <div className="absolute inset-0 flex items-center justify-center text-white text-sm font-light tracking-wider">
+          {Math.floor(progress)}%
         </div>
+      </div>
+
+      {/* Smooth fade-in button */}
+      <div
+        className={`absolute bottom-50 transition-all duration-700 ease-in-out ${
+          showStartButton
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-4 pointer-events-none"
+        }`}
+      >
+        <button
+          onClick={handleStart}
+          className="mt-6 px-20 py-2 border border-white text-white text-sm font-bold progress-button-light cursor-pointer"
+        >
+          Start Experience
+        </button>
       </div>
     </div>
   );

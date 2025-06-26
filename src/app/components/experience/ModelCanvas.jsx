@@ -111,7 +111,7 @@ function ModelCanvas() {
             className={`transition duration-500 cursor-pointer`}
           />
         </div>
-        <div className="fixed top-10 right-10 z-50">
+        <div className="fixed top-10 right-10 z-10">
           <ARbutton />
         </div>
         <section className="relative grid place-items-center h-[100vh]">
