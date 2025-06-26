@@ -29,7 +29,7 @@ export default function Section4() {
   } else if (isXL) {
     leftImageTarget = { y: -150, x: "-28%", rotate: -8 };
     rightImageTarget = { y: 0, x: "50%", rotate: 8 };
-    bottomImageTarget = { y: 200, x: "0%", rotate: 25 };
+    bottomImageTarget = { y: 220, x: "0%", rotate: 25 };
   }else{
     leftImageTarget = { y: 430, x: "-10%", rotate: 10 };
     rightImageTarget = { y: 360, x: "0%", rotate: -10 };

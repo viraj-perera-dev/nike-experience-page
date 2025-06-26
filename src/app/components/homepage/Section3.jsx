@@ -33,7 +33,7 @@ export default function Section3() {
 
   const handleScroll = (dir = "left" | "right") => {
     setAngleOffset((prev) =>
-      dir === "left" ? prev - scrollStep : prev + scrollStep
+      dir !== "left" ? prev - scrollStep : prev + scrollStep
     );
   };
 
@@ -47,10 +47,10 @@ export default function Section3() {
         {/* Header */}
         <div className="md:mt-20 mt-0 flex flex-col max-w-xl mx-auto md:gap-10 gap-5 h-full md:h-auto items-center justify-center">
           <h2 className="text-3xl md:text-6xl inline text-center">
-            <span className="text-3xl md:text-6xl font-light italic">
+            <span className="text-4xl md:text-6xl font-light italic text-neutral-500">
               Style
             </span>
-            <span className="text-3xl md:text-6xl font-semibold ml-2">
+            <span className="text-3xl md:text-6xl font-semibold ml-2 text-neutral-800">
               has no limits.
             </span>
           </h2>

@@ -29,7 +29,7 @@ function Loader({ onFinish }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-black text-white space-y-10 z-50 transition-opacity duration-700 ${
+      className={`fixed top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-black text-white space-y-10 z-[9999] transition-opacity duration-700 ${
         fadeOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >

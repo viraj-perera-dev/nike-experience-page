@@ -12,12 +12,12 @@ function Section1() {
           </p>
           {/* Text Block */}
           <div className="max-w-xl mt-20 lg:mt-0">
-            <h1 className="text-4xl md:text-5xl font-black leading-tight">
+            <h1 className="text-4xl md:text-5xl text-neutral-800 leading-tight">
               Inizia una nuova
               <br />
-              era di <em className="italic font-normal">Air Max</em>,<br />
+              era di <em className="italic text-neutral-500 text-4xl md:text-5xl">Air Max</em>,<br />
               dove lo stile è sempre in{" "}
-              <em className="italic font-normal">continua evoluzione</em>.
+              <em className="italic text-neutral-500 text-4xl md:text-5xl">continua evoluzione</em>.
             </h1>
             <p className="text-sm mt-8 text-gray-600">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

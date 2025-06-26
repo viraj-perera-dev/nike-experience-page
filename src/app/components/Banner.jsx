@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Banner() {
   return (
-    <div className="section5-wrapper pt-10 pb-5 overflow-hidden bg-white">
+    <div className="section5-wrapper py-10 overflow-hidden bg-white">
       <motion.div
         className="whitespace-nowrap flex gap-2"
         animate={{ x: ["0%", "-100%"] }}
