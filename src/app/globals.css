@@ -13,8 +13,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #000;
+  color: #fff;
   font-family: var(--font-pp-neue-machina), sans-serif;
 }
 
