@@ -54,9 +54,6 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 - **GitHub**: Repository
 - **Vercel**: Hosting e deploy
 
-![Screenshot Carousel](./screenshots/carosello.jpg)
-*Carosello circolare con animazioni Framer Motion*
-
 ## 📁 Struttura del Progetto
 
 ```
