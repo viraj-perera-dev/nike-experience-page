@@ -1,4 +1,4 @@
-# Sneakers Product Showcase
+# Nike Experience Website
 
 Un sito web moderno e interattivo per la presentazione di prodotti Nike, sviluppato con Next.js e caratterizzato da animazioni fluide, un'esperienza 3D immersiva e design responsive.
 
@@ -7,7 +7,7 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 
 ## 🚀 Demo Live
 
-[demo](https://nike-experience-website.vercel.app/)
+[Preview link here](https://nike-experience-website.vercel.app/)
 
 ## 📋 Indice
 
@@ -17,7 +17,6 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 - [Installazione](#-installazione)
 - [Architettura e Scelte Tecniche](#-architettura-e-scelte-tecniche)
 - [Sezioni del Sito](#-sezioni-del-sito)
-- [Performance e Ottimizzazioni](#-performance-e-ottimizzazioni)
 - [Responsività](#-responsività)
 - [Problemi Noti e Miglioramenti Futuri](#-problemi-noti-e-miglioramenti-futuri)
 - [Processo di Sviluppo](#-processo-di-sviluppo)
@@ -33,14 +32,11 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 - **Design Responsive**: Ottimizzato per tutti i dispositivi
 - **Gestione Dati**: Contenuti dinamici tramite file JSON statici
 
-![Screenshot Experience 3D](./screenshots/experience.png)
-*Sezione Experience con modello 3D interattivo*
 
 ## 🛠 Tecnologie Utilizzate
 
 ### Core Technologies
 - **Next.js 14**: Framework React con App Router
-- **React 18**: Libreria per l'interfaccia utente
 
 ### Animazioni e Interazioni
 - **Framer Motion**: Animazioni fluide e transizioni
@@ -48,14 +44,14 @@ Un sito web moderno e interattivo per la presentazione di prodotti Nike, svilupp
 - **GSAP**: Animazioni del modello 3D (performance ottimizzate)
 
 ### Modello 3D 
-- **React Three Fiber**: Integrazione Three.js con React
+- **React Three Fiber**: Libreria per la creazione di scene 3D
 
 ### Styling
 - **Tailwind CSS**: Framework CSS utility-first
-- **Custom CSS**: Animazioni e effetti speciali
+- **Custom CSS**: stili personalizzati
 
 ### Sviluppo e Versionamento
-- **GitHub**: Repository hosting
+- **GitHub**: Repository
 - **Vercel**: Hosting e deploy
 
 ![Screenshot Carousel](./screenshots/carosello.jpg)
@@ -95,7 +91,7 @@ nike-experience-page/
 ## 🚀 Installazione
 
 ### Prerequisiti
-- Node.js 18.x o superiore
+- Node.js 18 o superiore
 - npm o yarn
 
 ### Setup del progetto
@@ -120,14 +116,13 @@ Il sito sarà disponibile su [http://localhost:3000](http://localhost:3000)
 
 ## 🏗 Architettura e Scelte Tecniche
 
-### Next.js App Router
+### Next.js - App Router
 Ho scelto Next.js 14 con App Router per:
 - **Routing automatico**: Navigazione SPA senza configurazione manuale
 - **Server Components**: Miglior performance e SEO
 - **File-based routing**: Struttura intuitiva e scalabile
 
-### Framer Motion vs altre librerie
-**Motivazioni della scelta:**
+### Framer Motion
 - **Performance**: Ottimizzazioni hardware acceleration
 - **Flessibilità**: Controllo granulare delle animazioni
 - **Gesture support**: Drag, hover, tap nativi
@@ -136,44 +131,35 @@ Ho scelto Next.js 14 con App Router per:
 Per il controllo del modello 3D ho preferito GSAP a Framer Motion perché:
 - **Prestazioni superiori**: Ottimizzato per animazioni complesse
 - **Controllo preciso**: Timeline e tweening avanzati
-- **Compatibilità Three.js**: Integrazione consolidata
 
-
-![Screenshot Products](./screenshots/products.png)
-*Pagina prodotti con dati dinamici da JSON*
 
 ## 🎨 Sezioni del Sito
 
 ### Hero Section
 - **Effetto Glitch**: Animazione custom con Framer Motion
-- **Video Background**: Caricamento progressivo con loading state
-- **Call-to-Action**: Transizioni fluide verso il contenuto
+- **Video Background**
+
+![Screenshot Hero](./screenshots/herosection.png)
 
 ### Carosello Circolare
-- **Infinite Loop**: Implementazione custom con Framer Motion
+- **Infinite Loop**: Implementazione custom + Framer Motion
 
-### Sezione con Galleria Animata
-- **Parallax Effects**: Movimento differenziato degli elementi
+![Screenshot Carousel](./screenshots/carosello.jpg)
+
+### Sezione 03 / Outro - Immagini Animate
 - **Custom Easing**: Curve di animazione create con [cubic-bezier.com](https://cubic-bezier.com/)
-- **Staggered Animation**: Animazioni sequential degli elementi
+- **Animation**: Animazione custom con Framer Motion
+
+![Screenshot Outro](./screenshots/outro.png)
 
 ### Experience 3D
-- **Interazione on scroll**: Rotazioni zoome e movimenti gestiti con lo scroll trigger
+- **Interazione on scroll**: Rotazioni, zoom e movimenti gestiti con lo scroll trigger
 - **Lighting Setup**: Illuminazione realistica
 - **AR Integration**: Visualizzazione in realtà aumentata (mobile)
 - **Performance Optimization**: GSAP per ottimizzazione performance
 
-![Screenshot Mobile](./screenshots/mobile1.png)
+![Screenshot Mobile](./screenshots/experience.png)
 
-## ⚡ Performance e Ottimizzazioni
-
-### Implementate
-- **Image Optimization**: Next.js Image component 
-- **Smooth Scrolling**: Utilizzo della libreria Lenis
-
-### Da Implementare
-- **Ottimizzazione Immagini**: Conversione WebP/AVIF
-- **Video Compression**: Riduzione dimensioni video
 
 ## 📱 Responsività
 
@@ -182,10 +168,11 @@ Il sito è completamente responsive con:
 - **Mobile-First**: Design ottimizzato per mobile
 - **AR Support**: Realtà aumentata per dispositivi compatibili
 
-## 🚨 Problemi Noti e Miglioramenti Futuri
+![Screenshot Mobile](./screenshots/mobile1.png)
 
-### Limitazioni Attuali
-1. **Tempo di Sviluppo**: Progetto sviluppato principalmente nei weekend
+## 🚨 Problemi e Criticità
+
+1. **Tempo**: Progetto sviluppato principalmente nei weekend
 2. **Ottimizzazioni Media**: Immagini e video non completamente ottimizzati
 3. **Transizioni Navigazione**: Possibili miglioramenti nella fluidità
 4. **Code Refactoring**: Necessari commenti più dettagliati e miglioramenti del codice
@@ -228,12 +215,13 @@ Il progetto è stato suddiviso in task giornalieri:
 
 ## 🙏 Risorse
 
-- **React-three-fiber Community**: Per la documentazione eccellente
-- **Framer Motion**: Per l'API intuitiva
-- **Next.js Team**: Per il framework potente e flessibile
-- **Cubic Bezier**: Per lo strumento di curve personalizzate
-- **GSAP**: Per lo strumento di curve personalizzate
-- **Lenis**: Per lo strumento di curve personalizzate
-- **Tailwind CSS**: Per gestire lo stile e la responsività
+- **[react-three-fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)**: Per la gestione del modello 3D
+- **[convert3d](https://convert3d.org/)**: Per la conversione del modello glb in usdz (AR per dispositivi ios)
+- **[framer-motion](https://www.framer.com/)**: Per la gestione delle animazioni
+- **[nextjs](https://nextjs.org/)**: Framework per la creazione di siti web
+- **[cubic-bezier](https://cubic-bezier.com/)**: Per la gestione delle curve personalizzate
+- **[gsap](https://gsap.com/)**: Per la gestione delle animazioni
+- **[lenis](https://lenis.darkroom.engineering/)**: Per la gestione dello scroll
+- **[tailwind](https://tailwindcss.com/docs/installation/using-vite)**: Per la gestione dello stile e la responsività
 
 
