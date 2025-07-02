@@ -220,5 +220,5 @@ Il progetto è stato suddiviso in task giornalieri:
 - **[gsap](https://gsap.com/)**: Per la gestione delle animazioni
 - **[lenis](https://lenis.darkroom.engineering/)**: Per la gestione dello scroll
 - **[tailwind](https://tailwindcss.com/docs/installation/using-vite)**: Per la gestione dello stile e la responsività
-
+- **[gltf to react three fiber](https://gltf.pmnd.rs/)**: Per ottenere i singoli mesh del modello 3d
 
