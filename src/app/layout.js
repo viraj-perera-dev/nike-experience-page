@@ -1,6 +1,7 @@
 import localFont from 'next/font/local'
 import "./globals.css";
 import LenisProvider from './components/LenisProvider';
+import { Analytics } from "@vercel/analytics/next"
 
 const PPNeueMachina = localFont({
   src: [
@@ -80,6 +81,7 @@ export default function RootLayout({ children }) {
         <LenisProvider>
             {children}
         </LenisProvider>
+        <Analytics />
       </body>
     </html>
   );
